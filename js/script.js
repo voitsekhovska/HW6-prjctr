@@ -32,18 +32,19 @@ console.log(recursiveOddSumTo(10));
 // 3. Додаткова задача*
 
 const isXOEqual = (string) => {
-  let charAmount = {
-    "x": 0,
-    "o": 0,
-  };
+  let charAmountX = 0;
+  let charAmountO = 0;
+
   for (let char of string) {
-    if (char === "x" || char === "X") {
-      charAmount["x"] += 1;
-    } else if (char === "o" || char === "O") {
-      charAmount["o"] += 1;
+    char = char.toLowerCase();
+    if (char === "x") {
+      charAmountX += 1;
+    }
+    if (char === "o") {
+      charAmountO += 1;
     }
   }
-  return charAmount["x"] === charAmount["o"];
+  return charAmountX === charAmountO;
 };
 
 console.log(isXOEqual("ooxx"));

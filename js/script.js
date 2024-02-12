@@ -36,7 +36,7 @@ const isXOEqual = (string) => {
   let charAmountO = 0;
 
   for (let char of string) {
-    char = char.toLowerCase();
+    string = string.toLowerCase();
     if (char === "x") {
       charAmountX += 1;
     }
